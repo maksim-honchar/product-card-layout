@@ -1,0 +1,249 @@
+:root {
+    --dark-color: #161616;
+    --gray-text: #707072;
+    --card-bg: #F5F5F7;
+    --mint-bg: #DCFAFB;
+    --peach-bg: #FFE8DF;
+    --accent-color: #FF5151;
+    --white: #FFFFFF;
+}
+
+/* #region BASE */
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background-color: var(--white);
+    color: var(--dark-color, #161616);
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    overflow: clip;
+}
+
+._container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+/* #end region */
+
+/* #region main */
+.main {}
+
+.main__sale {}
+
+.main__container {}
+
+._container {}
+
+.main__title-body {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+.main__title {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.main__title-line {
+    width: 100%;
+    height: 2px;
+    background-color: var(--dark-color);
+}
+
+.main__body {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px; 
+    justify-content: center;
+}
+
+.main__card {
+    width: clamp(255px, 100%, 280px);
+    padding: 16px;
+    border-radius: 16px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    overflow: clip;
+    position: relative;
+}
+
+.main__card-slide {
+    position: absolute;
+    top: 0;
+    left: -50px;
+    width: 50px;
+    height: 100%;
+    background-color: var(--dark-color);
+    color: var(--white);
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 700;
+    transition: .5s;
+}
+
+.card__content {
+    transition: .5s;
+}
+
+.main__card:hover .card__content {
+    margin-left: 50px;
+}
+
+.main__card:hover .main__card-slide {
+    left: 0;
+}
+
+.card_bg {
+    background-color: var(--card-bg);
+}
+
+.card__title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.card__subtitle {
+    color: var(--gray-text, #707072);
+    font-size: 12px;
+    margin-bottom: 24px;
+}
+
+.card__image {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.card__image img {
+    max-width: 180px;
+}
+
+.card__size,
+.card__colors {
+    color: var(--dark-color);
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.card__feature {
+    color: var(--dark-color);
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 24px;
+}
+
+.card__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    margin-top: auto;
+}
+
+.heart__icon {
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.card__prices {
+    text-align: center;
+}
+
+
+
+.card__old-price {
+    font-size: 12px;
+    text-decoration-line: line-through;
+    margin-bottom: 4px;
+}
+
+.card__new-price {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.cart__wrapper {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background-color: var(--accent-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.cart__icon {
+    color: var(--white);
+    font-size: 21px;
+}
+
+.card__stars {}
+
+.stars__body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card__star:nth-child(5) {
+    filter: grayscale(100%);
+    opacity: 1;
+}
+
+.stars__rate {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.card_peach {
+    background-color: var(--peach-bg);
+}
+
+.card_mint {
+    background-color: var(--mint-bg);
+}
+
+.card_accent {
+    background-color: var(--accent-color);
+}
+
+.card_accent .card__title,
+.card_accent .card__subtitle,
+.card_accent .card__size,
+.card_accent .card__colors,
+.card_accent .card__feature,
+.card_accent .heart__icon {
+    color: var(--card-bg);
+}
+
+.card_accent .cart__wrapper {
+    background-color: var(--dark-color);
+}
+
+@media (max-width: 1140px) {
+    ._container {
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+}
+
+/* #end region */
