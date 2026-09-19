@@ -35,14 +35,6 @@ body {
 /* #end region */
 
 /* #region main */
-.main {}
-
-.main__sale {}
-
-.main__container {}
-
-._container {}
-
 .main__title-body {
     display: flex;
     align-items: center;
@@ -195,8 +187,6 @@ body {
     color: var(--white);
     font-size: 21px;
 }
-
-.card__stars {}
 
 .stars__body {
     display: flex;
